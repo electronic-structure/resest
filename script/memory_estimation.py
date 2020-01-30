@@ -75,7 +75,8 @@ def estimate_memory(atom_files, num_atoms, a1, a2, a3, gk_cutoff, pw_cutoff, gam
         num_ranks_per_node - try to estimate memory with this number of ranks per node
 
     Return:
-      m
+      (Np Nb) pair where Np is the estimated minimum number of MPI ranks and Nb is the estimated number of ranks
+      for band parallelization
     """
 
     nbnd = kwargs.get('nbnd', 0)
